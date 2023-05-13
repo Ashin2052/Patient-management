@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-88: Documentation and test.">
+      <change beforePath="$PROJECT_DIR$/.hintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="88105cbc-23d9-4c96-8414-245cf4c68ec3" />
+        <option name="url" value="https://github.com/Ashin2052/Allergy-management.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Jo5ZflpPSlIriBdLZdzSSaKAWj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Patient-management&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Allergy-management/client/node_modules/react-scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages" />
+      <recent name="$PROJECT_DIR$/client/_tests_" />
+      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$/server/_tests_" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.run:be">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <envs>
+        <env name="NODE_ENV" value="dev" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="run:be" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="run:be" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.15.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="run:fe" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="run:fe" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.15.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:watch" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="npm.client" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.run:be" />
+      <item itemvalue="npm.run:fe" />
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:watch" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.run:be" />
+        <item itemvalue="npm.run:fe" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.test:watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="" />
+      <created>1672731651768</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672731651768</updated>
+      <workItem from="1672731653891" duration="663000" />
+      <workItem from="1672732792458" duration="7239000" />
+      <workItem from="1672750547467" duration="797000" />
+      <workItem from="1672806922297" duration="24402000" />
+      <workItem from="1672846972844" duration="600000" />
+      <workItem from="1672891336183" duration="13623000" />
+      <workItem from="1672940985336" duration="599000" />
+      <workItem from="1672976869152" duration="2571000" />
+      <workItem from="1672982764536" duration="5925000" />
+      <workItem from="1673071466638" duration="1200000" />
+      <workItem from="1673165655706" duration="599000" />
+      <workItem from="1673238200644" duration="24854000" />
+      <workItem from="1673326944556" duration="17841000" />
+      <workItem from="1673408445645" duration="22731000" />
+      <workItem from="1673437196682" duration="112000" />
+      <workItem from="1673489865727" duration="21950000" />
+      <workItem from="1673526871305" duration="210000" />
+      <workItem from="1673528831836" duration="14000" />
+      <workItem from="1673530697139" duration="326000" />
+      <workItem from="1673582220552" duration="15801000" />
+      <workItem from="1673617540370" duration="21000" />
+      <workItem from="1673841988597" duration="23273000" />
+      <workItem from="1673875692901" duration="41000" />
+      <workItem from="1673931153764" duration="11760000" />
+      <workItem from="1673952065057" duration="32625000" />
+      <workItem from="1674100762255" duration="30821000" />
+      <workItem from="1674366647013" duration="6898000" />
+      <workItem from="1674446893461" duration="18264000" />
+      <workItem from="1674484672041" duration="1798000" />
+      <workItem from="1674535182740" duration="16076000" />
+      <workItem from="1674558614781" duration="1751000" />
+      <workItem from="1674639939294" duration="13948000" />
+      <workItem from="1674728774823" duration="7508000" />
+      <workItem from="1674923475480" duration="663000" />
+      <workItem from="1675076532636" duration="1473000" />
+      <workItem from="1675141399773" duration="15277000" />
+      <workItem from="1675222736194" duration="6164000" />
+      <workItem from="1675243211459" duration="3449000" />
+      <workItem from="1675400244807" duration="2181000" />
+      <workItem from="1675402438356" duration="2620000" />
+      <workItem from="1675608783715" duration="599000" />
+      <workItem from="1675658168226" duration="2096000" />
+      <workItem from="1675660280253" duration="1441000" />
+      <workItem from="1675661735517" duration="19850000" />
+      <workItem from="1675689700807" duration="3520000" />
+      <workItem from="1675693303951" duration="2061000" />
+      <workItem from="1675695423077" duration="7061000" />
+      <workItem from="1675742064733" duration="2152000" />
+      <workItem from="1675744305822" duration="20066000" />
+      <workItem from="1675787826012" duration="1462000" />
+      <workItem from="1675830295272" duration="21001000" />
+      <workItem from="1675913524206" duration="15388000" />
+      <workItem from="1676001021536" duration="12617000" />
+      <workItem from="1676267197047" duration="649000" />
+      <workItem from="1676286229891" duration="630000" />
+      <workItem from="1676296697354" duration="26000" />
+      <workItem from="1676518001288" duration="4002000" />
+      <workItem from="1678772446084" duration="6279000" />
+      <workItem from="1679647907805" duration="2258000" />
+      <workItem from="1679977704581" duration="26000" />
+      <workItem from="1680092319404" duration="5000" />
+      <workItem from="1680092699295" duration="9000" />
+      <workItem from="1680092774115" duration="767000" />
+      <workItem from="1680259594814" duration="1200000" />
+      <workItem from="1680500187666" duration="70000" />
+      <workItem from="1680581657363" duration="10000" />
+      <workItem from="1682667888939" duration="30000" />
+      <workItem from="1682676970918" duration="1133000" />
+      <workItem from="1682682404065" duration="15000" />
+      <workItem from="1683867552632" duration="207000" />
+      <workItem from="1683868138905" duration="498000" />
+      <workItem from="1683869084849" duration="6164000" />
+      <workItem from="1683876914765" duration="213000" />
+      <workItem from="1683877133161" duration="18000" />
+      <workItem from="1683877571171" duration="10339000" />
+      <workItem from="1683892832541" duration="11944000" />
+      <workItem from="1683913407033" duration="537000" />
+      <workItem from="1683914017885" duration="307000" />
+      <workItem from="1683914464232" duration="1000" />
+      <workItem from="1683914479374" duration="203000" />
+      <workItem from="1683952178442" duration="454000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initialize project.">
+      <created>1672741237120</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672741237120</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initialize project.">
+      <created>1672847569641</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672847569641</updated>
+    </task>
+    <task id="LOCAL-00003" summary="LFUNIOLD-88: Backend work and initiate fe.">
+      <created>1673266285796</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673266285796</updated>
+    </task>
+    <task id="LOCAL-00004" summary="LFUNIOLD-88: Frontend setup.&#10;            - Login page design.&#10;            - Redux and route setup">
+      <created>1673352452303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673352452303</updated>
+    </task>
+    <task id="LOCAL-00005" summary="LFUNIOLD-88: Frontend setup.&#10;            - Authorization">
+      <created>1673437302607</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673437302607</updated>
+    </task>
+    <task id="LOCAL-00006" summary="LFUNIOLD-88: Make form and implement functionalities.">
+      <created>1673871357307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673871357307</updated>
+    </task>
+    <task id="LOCAL-00007" summary="LFUNIOLD-88: Make form and add functionalities.">
+      <created>1674065814099</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674065814099</updated>
+    </task>
+    <task id="LOCAL-00008" summary="LFUNIOLD-88: MmAIN FUNCTIONALITES COMPLETED">
+      <created>1674323088388</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674323088388</updated>
+    </task>
+    <task id="LOCAL-00009" summary="LFUNIOLD-88: Set up test and doc.">
+      <created>1674713121311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674713121311</updated>
+    </task>
+    <task id="LOCAL-00010" summary="LFUNIOLD-88: Set up test and doc.">
+      <created>1675400326356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675400326356</updated>
+    </task>
+    <task id="LOCAL-00011" summary="LFUNIOLD-88: Implement logger and README.md.">
+      <created>1675662337698</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675662337698</updated>
+    </task>
+    <task id="LOCAL-00012" summary="LFUNIOLD-88: Implement logger and README.md.">
+      <created>1675676858676</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675676858676</updated>
+    </task>
+    <task id="LOCAL-00013" summary="LFUNIOLD-88: Implement test.">
+      <created>1675683599685</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675683599685</updated>
+    </task>
+    <task id="LOCAL-00014" summary="LFUNIOLD-88: Implement tes.">
+      <created>1675699106553</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675699106553</updated>
+    </task>
+    <task id="LOCAL-00015" summary="LFUNIOLD-88: Rename file.">
+      <created>1675704900575</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675704900575</updated>
+    </task>
+    <task id="LOCAL-00016" summary="LFUNIOLD-88: Logger update">
+      <created>1675742404592</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742404592</updated>
+    </task>
+    <task id="LOCAL-00017" summary="LFUNIOLD-88: Logger update">
+      <created>1675742453870</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742453870</updated>
+    </task>
+    <task id="LOCAL-00018" summary="LFUNIOLD-88: Code cleanup.">
+      <created>1675742928120</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742928120</updated>
+    </task>
+    <task id="LOCAL-00019" summary="LFUNIOLD-88: Update README.md">
+      <created>1675743855457</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675743855457</updated>
+    </task>
+    <task id="LOCAL-00020" summary="LFUNIOLD-88: Update constant.">
+      <created>1675746228723</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1675746228723</updated>
+    </task>
+    <task id="LOCAL-00021" summary="LFUNIOLD-88: Implement global interceptor.">
+      <created>1675755820688</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675755820688</updated>
+    </task>
+    <task id="LOCAL-00022" summary="LFUNIOLD-88:Refactor modal.">
+      <created>1675757279330</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675757279330</updated>
+    </task>
+    <task id="LOCAL-00023" summary="LFUNIOLD-88:Refactor modal.">
+      <created>1675758107730</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675758107730</updated>
+    </task>
+    <task id="LOCAL-00024" summary="LFUNIOLD-88:Refactor modal.">
+      <created>1675788962791</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675788962791</updated>
+    </task>
+    <task id="LOCAL-00025" summary="LFUNIOLD-88:Refactor code.">
+      <created>1675830404171</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675830404171</updated>
+    </task>
+    <task id="LOCAL-00026" summary="LFUNIOLD-88:Refactor code.">
+      <created>1675836053843</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675836053844</updated>
+    </task>
+    <task id="LOCAL-00027" summary="LFUNIOLD-88:Refactor readme.">
+      <created>1675836184098</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1675836184098</updated>
+    </task>
+    <task id="LOCAL-00028" summary="LFUNIOLD-88: Resolve api test error.">
+      <created>1675841638432</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1675841638432</updated>
+    </task>
+    <task id="LOCAL-00029" summary="LFUNIOLD-88: Disable ok button.">
+      <created>1675843454022</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1675843454022</updated>
+    </task>
+    <task id="LOCAL-00030" summary="LFUNIOLD-88: validate form">
+      <created>1675844934736</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1675844934736</updated>
+    </task>
+    <task id="LOCAL-00031" summary="LFUNIOLD-88: Refactor slice name.">
+      <created>1675846855895</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1675846855895</updated>
+    </task>
+    <task id="LOCAL-00032" summary="LFUNIOLD-88: Refactor form.">
+      <created>1675850322471</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1675850322471</updated>
+    </task>
+    <task id="LOCAL-00033" summary="LFUNIOLD-88: Documentation and test.">
+      <created>1683914232293</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1683914232293</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/LFUNIOLD-88" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="LFUNIOLD-88: Backend work and initiate fe." />
+    <MESSAGE value="LFUNIOLD-88: Frontend setup.&#10;            - Login page design.&#10;            - Redux and route setup" />
+    <MESSAGE value="LFUNIOLD-88: Frontend setup.&#10;            - Authorization" />
+    <MESSAGE value="LFUNIOLD-88: Make form and implement functionalities." />
+    <MESSAGE value="LFUNIOLD-88: Make form and add functionalities." />
+    <MESSAGE value="LFUNIOLD-88: MmAIN FUNCTIONALITES COMPLETED" />
+    <MESSAGE value="LFUNIOLD-88: Set up test and doc." />
+    <MESSAGE value="LFUNIOLD-88: Implement logger and README.md." />
+    <MESSAGE value="LFUNIOLD-88: Implement test." />
+    <MESSAGE value="LFUNIOLD-88: Implement tes." />
+    <MESSAGE value="LFUNIOLD-88: Rename file." />
+    <MESSAGE value="LFUNIOLD-88: Logger update" />
+    <MESSAGE value="LFUNIOLD-88: Code cleanup." />
+    <MESSAGE value="LFUNIOLD-88: Update README.md" />
+    <MESSAGE value="LFUNIOLD-88: Update constant." />
+    <MESSAGE value="LFUNIOLD-88: Implement global interceptor." />
+    <MESSAGE value="LFUNIOLD-88:Refactor modal." />
+    <MESSAGE value="LFUNIOLD-88:Refactor code." />
+    <MESSAGE value="LFUNIOLD-88:Refactor readme." />
+    <MESSAGE value="LFUNIOLD-88: Resolve api test error." />
+    <MESSAGE value="LFUNIOLD-88: Disable ok button." />
+    <MESSAGE value="LFUNIOLD-88: validate form" />
+    <MESSAGE value="LFUNIOLD-88: Refactor slice name." />
+    <MESSAGE value="LFUNIOLD-88: Refactor form." />
+    <MESSAGE value="LFUNIOLD-88: Documentation and test." />
+    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-88: Documentation and test." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/client/src/App.test.tsx</url>
+          <line>5</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="js.build_tools.npm">
+        <watch expression="x" language="TypeScript" />
+        <watch expression="req.file" language="TypeScript" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
