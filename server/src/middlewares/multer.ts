@@ -1,5 +1,5 @@
 const path = require('path');
-const multer = require('src/middlewares/multer');
+const multer = require('multer');
 
 module.exports = multer({
     storage: multer.diskStorage({}),

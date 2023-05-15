@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-88: Documentation and test.">
-      <change beforePath="$PROJECT_DIR$/.hintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lerna.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="Multiple">
+      <change afterPath="$PROJECT_DIR$/client/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/DTO/observation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/hospital.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/nurse.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/observation.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/practitioner.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/configs/cloudinary.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/configs/cloudinary.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/middlewares/multer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/middlewares/multer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/patient.schema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +44,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="88105cbc-23d9-4c96-8414-245cf4c68ec3" />
-        <option name="url" value="https://github.com/Ashin2052/Allergy-management.git" />
+        <option name="url" value="https://github.com/Ashin2052/Patient-management.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -48,27 +59,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Patient-management&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Allergy-management/client/node_modules/react-scripts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/ashinsinghmahat/IdeaProjects/Patient-management",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/home/ashinsinghmahat/IdeaProjects/Allergy-management/client/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.14314516",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -78,7 +94,7 @@
       <recent name="$PROJECT_DIR$/server/_tests_" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.run:be">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
       <node-options value="" />
@@ -161,9 +177,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.run:be" />
         <item itemvalue="npm.run:fe" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.test:watch" />
       </list>
@@ -258,6 +274,8 @@
       <workItem from="1683914464232" duration="1000" />
       <workItem from="1683914479374" duration="203000" />
       <workItem from="1683952178442" duration="454000" />
+      <workItem from="1683964507252" duration="8347000" />
+      <workItem from="1684123300584" duration="22487000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project.">
       <created>1672741237120</created>
@@ -521,7 +539,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LFUNIOLD-88: Backend work and initiate fe." />
     <MESSAGE value="LFUNIOLD-88: Frontend setup.&#10;            - Login page design.&#10;            - Redux and route setup" />
     <MESSAGE value="LFUNIOLD-88: Frontend setup.&#10;            - Authorization" />
     <MESSAGE value="LFUNIOLD-88: Make form and implement functionalities." />
@@ -546,7 +563,8 @@
     <MESSAGE value="LFUNIOLD-88: Refactor slice name." />
     <MESSAGE value="LFUNIOLD-88: Refactor form." />
     <MESSAGE value="LFUNIOLD-88: Documentation and test." />
-    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-88: Documentation and test." />
+    <MESSAGE value="Multiple" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
