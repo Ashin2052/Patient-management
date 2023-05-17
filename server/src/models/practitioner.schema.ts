@@ -1,52 +1,60 @@
-import mongoose, {Schema, model} from 'mongoose';
+import mongoose, { Schema, model } from "mongoose";
 
- const PractitionerSchema = new Schema<any>({
-   practitionerId: {
-            type: String,
-        },firstName: {
-            type: String,
-        },lastName: {
-            type: String,
-        },address1: {
-            type: String,
-        },address2: {
-            type: String,
-        },number1: {
-            type: String,
-        },number2: {
-            type: String,
-        },checkIn: {
-            type: String,
-        },checkOut: {
-            type: String,
-        }
+const PractitionerSchema = new Schema<any>(
+  {
+    practitionerId: {
+      type: String,
     },
-    {
-        timestamps: true,
-        id: true,
-        toJSON: {
-            transform(doc, user) {
-                user.id = user.Id
-                delete user.Id
-            }
-        }
-    });
+    firstName: {
+      type: String,
+    },
+    lastName: {
+      type: String,
+    },
+    address1: {
+      type: String,
+    },
+    address2: {
+      type: String,
+    },
+    number1: {
+      type: String,
+    },
+    number2: {
+      type: String,
+    },
+    checkIn: {
+      type: String,
+    },
+    checkOut: {
+      type: String,
+    },
+    overTime: {
+      type: Boolean,
+    },
+  },
+  {
+    timestamps: true,
+    id: true,
+  }
+);
 
+const PractitionerModel = model<any>("Practitioner", PractitionerSchema);
 
-
-
-const  PractitionerModel =  model<any>('Practitioner', PractitionerSchema)
-
-PractitionerSchema.pre('save', function (next) {
-    var self = this;
-    PractitionerModel.exists({practitionerId : self.practitionerId}, function (err, present) {
-        if (!present){
-            next();
-        }else{
-            console.log('user exists: ',self.practitionerId);
-            next(new Error("User exists!"));
-        }
-    });
+PractitionerSchema.pre("save", function (next) {
+  var self = this;
+  PractitionerModel.exists(
+    { practitionerId: self.practitionerId },
+    function (err, present) {
+      if (!present) {
+        next();
+      } else {
+        const data = this.getUpdate();
+        this.update({}, data).exec();
+        next();
+      }
+    }
+  );
 });
 
-export {PractitionerSchema, PractitionerModel};
+export { PractitionerSchema, PractitionerModel };

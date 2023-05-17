@@ -1,19 +1,21 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
 import AppRoutes from "./routes";
-import {BrowserRouter} from "react-router-dom";
-import {GlobalLoader} from "./shared/ui/loader/loader";
+
+import { GlobalLoader } from "./shared/ui/loader/loader";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <GlobalLoader>
-                <div className="app-container">
-                    <AppRoutes/>
-                </div>
-            </GlobalLoader>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <GlobalLoader>
+        <div className="app-container">
+          <AppRoutes />
+        </div>
+      </GlobalLoader>
+    </BrowserRouter>
+  );
 }
 
 export default App;

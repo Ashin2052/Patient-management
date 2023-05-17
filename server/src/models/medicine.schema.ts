@@ -1,44 +1,45 @@
-import mongoose, {Schema, model} from 'mongoose';
+import mongoose, { Schema, model } from "mongoose";
 
-const MedicationSchema = new Schema<any>({
-        medicationId: {
-            type: String,
-        },medication_name: {
-            type: String,
-        },medication_company: {
-            type: String,
-        },medication_level: {
-            type: String,
-        },medication_remark: {
-            type: String,
-        }
+const MedicationSchema = new Schema<any>(
+  {
+    medicationId: {
+      type: String,
     },
-    {
-        timestamps: true,
-        id: true,
-        toJSON: {
-            transform(doc, user) {
-                user.id = user._id
-                delete user._id
-            }
-        }
-    });
+    medicationName: {
+      type: String,
+    },
+    medicationCompany: {
+      type: String,
+    },
+    medicationLevel: {
+      type: String,
+    },
+    medicationRemark: {
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+    id: true,
+  }
+);
 
+const MedicationModel = model<any>("Medication", MedicationSchema);
 
-
-
-const  MedicationModel =  model<any>('Medication', MedicationSchema)
-
-MedicationSchema.pre('save', function (next) {
-    var self = this;
-    MedicationModel.exists({medicationId : self.medicationId}, function (err, present) {
-        if (!present){
-            next();
-        }else{
-            console.log('user exists: ',self.medicationId);
-            MedicationModel.updateOne(present);
-        }
-    });
+MedicationSchema.pre("save", function (next) {
+  var self = this;
+  MedicationModel.exists(
+    { medicationId: self.medicationId },
+    function (err, present) {
+      if (!present) {
+        next();
+      } else {
+        const data = this.getUpdate();
+        this.update({}, data).exec();
+        next();
+      }
+    }
+  );
 });
 
-export {MedicationSchema, MedicationModel};
+export { MedicationSchema, MedicationModel };

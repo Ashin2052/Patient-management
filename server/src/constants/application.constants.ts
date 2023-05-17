@@ -1,4 +1,4 @@
 export enum envConstant {
-    TEST = 'TEST',
-    DEV = 'DEV',
+  TEST = "TEST",
+  DEV = "DEV",
 }

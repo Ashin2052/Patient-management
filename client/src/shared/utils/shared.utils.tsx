@@ -1,7 +1,7 @@
 export const checkIfStringContainsSpaceInStartAndEnd = (
-    str: string
-): Boolean => {
-    return str.startsWith(" ") || str.endsWith(" ");
+  str: string
+): boolean => {
+  return str.startsWith(" ") || str.endsWith(" ");
 };
 
 /**
@@ -9,11 +9,11 @@ export const checkIfStringContainsSpaceInStartAndEnd = (
  * @param {number|string} b
  */
 export const defaultSort = (a, b) => {
-    if (a < b) return 1;
-    if (b < a) return -1;
-    return 0;
+  if (a < b) return 1;
+  if (b < a) return -1;
+  return 0;
 };
 
 export const Sorter = {
-    DEFAULT: defaultSort,
+  DEFAULT: defaultSort,
 };
