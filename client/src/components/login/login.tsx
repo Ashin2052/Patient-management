@@ -80,7 +80,7 @@ export const Login = () => {
               Submit
             </Button>
           </div>
-          <a>Dont have a account? Sign Up</a>
+          <a href={"/registration"}>Dont have a account? Sign Up</a>
         </div>
       </Form>
     </div>

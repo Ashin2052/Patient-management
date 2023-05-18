@@ -15,19 +15,7 @@ const layout = {
 
 const Registration = () => {
   const navigate = useNavigate();
-  const [form] = Form.useForm();
-  const [checkPassword, setCheckPassword] = useState(false);
   const [responseError, setResponseError] = useState("");
-
-  useEffect(() => {
-    if (
-      form.getFieldValue("password") === form.getFieldValue("confirmPassword")
-    ) {
-      setCheckPassword(true);
-    } else {
-      setCheckPassword(false);
-    }
-  }, [checkPassword, form]);
 
   const onFinish = (val) => {
     callApi({
@@ -79,14 +67,26 @@ const Registration = () => {
           label="Password"
           rules={[{ required: true, message: "PLease enter the password" }]}
         >
-          <Input type={"password"} />
+          <Input.Password />
         </Form.Item>
         <Form.Item
           name="confirmPassword"
           label="Confirm Password"
-          rules={[{ required: checkPassword, message: "Password mismatch" }]}
+          rules={[
+            { required: true, message: "Confirm password" },
+            ({ getFieldValue }) => ({
+              validator(_, value) {
+                if (!value || getFieldValue("password") === value) {
+                  return Promise.resolve();
+                }
+                return Promise.reject(
+                  new Error("The two passwords that you entered do not match!")
+                );
+              },
+            }),
+          ]}
         >
-          <Input type={"password"} />
+          <Input.Password />
         </Form.Item>
         <div>{responseError && <div>{responseError}</div>}</div>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
