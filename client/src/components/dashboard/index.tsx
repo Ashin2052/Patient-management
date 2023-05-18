@@ -18,8 +18,6 @@ import {
 
 import callApi from "../../shared/api";
 
-const { Panel } = Collapse;
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -33,7 +31,9 @@ const columns: ColumnsType<any> = [
     title: "Patient",
     dataIndex: "patient",
     key: "patient.patientSsn",
-    render: (row) => <div>{row?.firstName + row.lastName}</div>,
+    render: (row) => (
+      <a href={`/patient/${row.patientSsn}`}>{row?.firstName + row.lastName}</a>
+    ),
   },
   {
     title: "Observation",
@@ -49,8 +49,10 @@ const columns: ColumnsType<any> = [
 const patientListAndLastMedication: ColumnsType<any> = [
   {
     title: "Patient",
-    dataIndex: "firstName",
     key: "patientSsn",
+    render: (row) => (
+      <a href={`/patient/${row.patientId}`}>{row?.firstName + row.lastName}</a>
+    ),
   },
   {
     title: "Medication",
@@ -104,7 +106,7 @@ const Dashboard = () => {
                 </Col>
               </Row>
               <Row className={"graph-container"}>
-                <Col span={12} className={"boz-shadow m-16 pd-8"}>
+                <Col span={12} className={"boz-shadow pd-8"}>
                   <h3>Practitioner By patient</h3>
                   <Bar
                     data={{
@@ -123,7 +125,7 @@ const Dashboard = () => {
                     }}
                   />
                 </Col>
-                <Col span={12} className={"boz-shadow m-16 pd-8"}>
+                <Col span={12} className={"boz-shadow ml-4 pd-8"}>
                   <h3>Nurse per patient</h3>
                   <Bar
                     data={{
@@ -147,7 +149,7 @@ const Dashboard = () => {
                 {/*<Row className={"graph-container"}>*/}
               </Row>{" "}
               <Row className={"graph-container"}>
-                <Col span={24} className={"boz-shadow m-16 pd-8"}>
+                <Col span={24} className={"boz-shadow  pd-8"}>
                   <h3>Medicine per patient</h3>
                   <Bar
                     data={{

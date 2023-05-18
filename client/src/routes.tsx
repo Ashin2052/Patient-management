@@ -6,6 +6,7 @@ import { PrivateRoute } from "./shared/auth";
 import { HeaderComponent } from "./components/header";
 import Registration from "./components/registration";
 import Dashboard from "./components/dashboard";
+import { PatientComponent } from "./components/patient";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,14 @@ const AppRoutes = () => {
           element={
             <PrivateRoute>
               <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/patient/:id"
+          element={
+            <PrivateRoute>
+              <PatientComponent />
             </PrivateRoute>
           }
         />

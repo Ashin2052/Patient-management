@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "antd";
+import { Button, Row } from "antd";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { LogoutOutlined } from "@ant-design/icons";
 
@@ -28,7 +28,10 @@ export const HeaderComponent = () => {
 
   return (
     <div className={"page-container"}>
-      <div className={"pb-24"}>
+      <Row justify={"space-between"} align={"middle"} className={"pb-24"}>
+        <Link to={"/home"} color={"white"}>
+          Home
+        </Link>
         <Button
           style={{ float: "right" }}
           type="primary"
@@ -36,7 +39,7 @@ export const HeaderComponent = () => {
           icon={<LogoutOutlined />}
           onClick={onLogout}
         />
-      </div>
+      </Row>
     </div>
   );
 };

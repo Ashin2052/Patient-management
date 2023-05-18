@@ -50,7 +50,7 @@
   padding-bottom: 24px;
 }
 
-m-16{
+.m-16{
   margin: 16px;
 }
 
@@ -60,6 +60,10 @@ m-16{
 
 .mr-16 {
   margin-right: 16px;
+}.
+
+ .ml-4 {
+  margin-left: 4px;
 }
 .width-100 {
   width: 100%;

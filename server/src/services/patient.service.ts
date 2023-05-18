@@ -280,11 +280,73 @@ export const patientMedicationLevel = (patientSsn: string) => {
       },
     },
     {
-      $project: {
-        medications: "$medications",
+      $group: {
+        _id: patientSsn,
+        root: { $first: "$$ROOT" },
       },
     },
-  ]);
+  ]).then((data: any) => {
+    //initialize return response
+    let patientMedicationsLevel = {
+      labels: [],
+      dataSet: [],
+    };
+
+    //data comes in single array
+    data[0].root.observations.forEach((observation) => {
+      let medication = data[0].root.medications.find(
+        (medication) => medication.medicationId === observation.medicationId
+      );
+
+      let patientMedication = {
+        medicationName: medication.medicationName,
+        medicationLevel: [],
+      };
+      let i = 0;
+
+      let medicationLevel = medication.medicationLevel;
+      // decrement date by one month and also decrement medication by one level
+      while (medicationLevel >= 0) {
+        let date = new Date(observation.date);
+        date.setMonth(date.getMonth() - i);
+        if (
+          !patientMedicationsLevel.labels.find((val) => val === date.getMonth())
+        ) {
+          patientMedicationsLevel.labels.push(date.getMonth());
+        }
+        patientMedication.medicationLevel.push({
+          level: +medicationLevel,
+          date: date.getMonth(),
+        });
+        i++;
+        medicationLevel--;
+      }
+      patientMedicationsLevel.dataSet.push(patientMedication);
+    });
+    patientMedicationsLevel.labels.sort((a, b) => b - a);
+
+    let finalResponseData = {
+      labels: patientMedicationsLevel.labels,
+      dataSet: [],
+    };
+
+    patientMedicationsLevel.dataSet.forEach((data) => {
+      let newVal = patientMedicationsLevel.labels.map((value) => 0);
+      data.medicationLevel.forEach((medication) => {
+        let index = patientMedicationsLevel.labels.findIndex(
+          (val) => val === medication.date
+        );
+        newVal[index] = medication.level;
+      });
+
+      finalResponseData.dataSet.push({
+        medicationName: data.medicationName,
+        medicationLevel: newVal,
+      });
+    });
+
+    return finalResponseData;
+  });
 };
 
 /**
