@@ -7,7 +7,7 @@ const transformCsvToSchema = (observation) => {
       time: observation.observation_time,
       patientId: observation.patient_ssn,
       hospitalId: observation.hospital_id,
-      practitionerId: observation.hospital_id,
+      practitionerId: observation.practitioner_id,
       nurseId: observation.nurse_id,
       medicationId: observation.medication_id,
     },
@@ -57,10 +57,10 @@ const transformCsvToSchema = (observation) => {
     },
     medication: {
       medicationId: observation.medication_id,
-      medication_name: observation.medication_name,
-      medication_company: observation.medication_company,
-      medication_level: observation.medication_level,
-      medication_remark: observation.medication_remark,
+      medicationName: observation.medication_name,
+      medicationCompany: observation.medication_company,
+      medicationLevel: observation.medication_level,
+      medicationRemark: observation.medication_remark,
     },
   };
 };

@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "./login.css";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+import { Input } from "antd/lib";
+
+import { Button, Form } from "antd";
+
 import api from "../../shared/api";
 import { login } from "../../shared/reducers/auth-reducer";
-import { Input } from "antd/lib";
-import { Button, Form } from "antd";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -64,23 +67,22 @@ export const Login = () => {
         {error && (
           <div className={"error-msg"}>please check your credentials.</div>
         )}
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
-      <div>
-        <p>Dont have a account</p>
-        <Button
-          onClick={() => {
-            navigate("/registration");
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          Sign Up
-        </Button>
-      </div>
+          <div>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </div>
+          <a>Dont have a account? Sign Up</a>
+        </div>
+      </Form>
     </div>
   );
 };

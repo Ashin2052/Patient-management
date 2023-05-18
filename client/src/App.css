@@ -41,6 +41,7 @@
 
 }
 
+
 .pd-16 {
   padding: 16px;
 }
@@ -48,6 +49,11 @@
 .pb-24 {
   padding-bottom: 24px;
 }
+
+m-16{
+  margin: 16px;
+}
+
 .ml-16 {
   margin-left: 16px;
 }
@@ -62,14 +68,28 @@
   padding: 10px;
 }
 
+.pd-8 {
+  padding: 8px;
+}
+
 .count-box {
   padding: 16px;
   height: 70px;
   background: white;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  margin: 0 16px;
 }
-.patient-last-observation-table {
-  height: 500px;
-  overflow: auto;
+
+.dashboard-table {
+  background: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 16px;
+  margin: 0 16px 16px 16px;
+}
+.graph-container {
+  background: white;
+  margin: 16px;
+}
+
+.boz-shadow {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }

@@ -4,12 +4,13 @@ import * as patientService from "../services/patient.service";
 const router = Router();
 const multer = require("multer");
 const upload = multer();
+const auth = require("../middlewares/auth");
 
 router.post("/upload", upload.single("csv"), async (req, res, next) => {
   patientService.uploadPatientsINfo(req.file, res);
 });
 
-router.get("/dashboard", (req, res, next) => {
+router.get("/dashboard", auth, (req, res, next) => {
   patientService
     .aggregate()
     .then((data) => {
@@ -21,7 +22,7 @@ router.get("/dashboard", (req, res, next) => {
     });
 });
 
-router.get("/patientMedicationLevel/:id", (req, res, next) => {
+router.get("/patientMedicationLevel/:id", auth, (req, res, next) => {
   patientService
     .patientMedicationLevel(req.params.id)
     .then((data) => {

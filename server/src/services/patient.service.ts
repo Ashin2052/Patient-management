@@ -144,7 +144,7 @@ const medicationPerPatient = () => {
           count: {
             $size: "$patients",
           },
-          medicationName: "$medicationName.medication_name",
+          medicationName: "$medicationName.medicationName",
           medicationId: "$medicationName.medicationId",
         },
       },
@@ -180,7 +180,7 @@ const nursePerPatient = () => {
       },
       {
         $group: {
-          _id: "$medicationId",
+          _id: "$nurseId",
           patients: {
             $addToSet: "$patient",
           },
@@ -193,9 +193,9 @@ const nursePerPatient = () => {
           count: {
             $size: "$patients",
           },
-          firstName: "$nurse.fistName",
+          firstName: "$nurse.firstName",
           lastName: "$nurse.lastName",
-          medicationId: "$nurse.nurseId",
+          nurse: "$nurse.nurseId",
         },
       },
     ]);
@@ -231,11 +231,11 @@ const doctorPerPatient = () => {
       },
       {
         $group: {
-          _id: "$medicationId",
+          _id: "$practitionerId",
           patients: {
             $addToSet: "$patient",
           },
-          practitioner: { $first: "$$ROOT" },
+          nurse: { $first: "$$ROOT" },
         },
       },
 
@@ -244,8 +244,9 @@ const doctorPerPatient = () => {
           count: {
             $size: "$patients",
           },
-          medicationName: "$practitioner.practitionerName",
-          medicationId: "$practitioner.practitionerId",
+          firstName: "$nurse.firstName",
+          lastName: "$nurse.lastName",
+          nurse: "$nurse.nurseId",
         },
       },
     ]);
@@ -319,14 +320,17 @@ const listOfPatientAndLastMedicationAssigned = () => {
     {
       $group: {
         _id: "$patientId",
-        global: { $first: "$$ROOT" },
+        root: { $first: "$$ROOT" },
       },
     },
     {
       $project: {
         _id: "$_id",
-        patient: "$global.patients",
-        lastMedication: "$global.medications",
+        patientId: "$root.patients.patientSsn",
+        firstName: "$root.patients.firstName",
+        lastName: "$root.patients.lastName",
+        medicationName: "$root.medications.medicationName",
+        medicationId: "$root.medications.medicationId",
       },
     },
   ]);

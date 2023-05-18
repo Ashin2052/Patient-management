@@ -16,10 +16,14 @@ export const PrivateRoute = ({ children }: any) => {
   }
   // authorized so return child components
   return (
-    <Space direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
+    <Space
+      direction="vertical"
+      style={{ width: "100%", height: "100%" }}
+      size={[0, 48]}
+    >
       <Layout>
         <Header>{<HeaderComponent />}</Header>
-        <Content style={{ margin: "16px", padding: "16px", height: "100%" }}>
+        <Content style={{ margin: "16px", padding: "16px" }}>
           <div>{children}</div>
         </Content>
       </Layout>

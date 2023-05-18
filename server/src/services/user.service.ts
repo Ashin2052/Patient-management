@@ -32,6 +32,10 @@ export const login = async (req) => {
       email: req.body.email,
     });
 
+    if (!user) {
+      throw { message: "Invalid email" };
+    }
+
     const match = await bcrypt.compare(req.body.password, user.password);
 
     if (!match) {
@@ -103,18 +107,16 @@ export const generateRefreshToken = async (req, res) => {
 //todo
 export const logout = async (req, res) => {
   try {
-    // const refreshToken = req.cookies.refreshToken;
-    // if (!refreshToken) return res.sendStatus(204);
-    // const user = await UserSchema.findOne({
-    //     refreshToken: refreshToken
-    // });
-    // if (!user[0]) return res.sendStatus(204);
-    // const userId = user[0].id;
-    // await UserSchema.findByIdAndUpdate(userId, {refreshToken: null}
-    // );
-    // res.clearCookie('refreshToken');
-    // return res.sendStatus(200);
-    return;
+    const refreshToken = req.cookies.refreshToken;
+    if (!refreshToken) return res.sendStatus(204);
+    const user = await UserSchema.findOne({
+      refreshToken: refreshToken,
+    });
+    if (!user[0]) return res.sendStatus(204);
+    const userId = user[0].id;
+    await UserSchema.findByIdAndUpdate(userId, { refreshToken: null });
+    res.clearCookie("refreshToken");
+    return res.sendStatus(200);
   } catch (err) {
     logger.error(err.toString());
   }
