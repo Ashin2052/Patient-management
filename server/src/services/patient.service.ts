@@ -145,13 +145,18 @@ const getPatientListAndLastObservation = () => {
     },
     {
       $sort: {
-        createdAt: -1,
+        createdAt: 1,
       },
     },
     {
       $group: {
         _id: "$patient._id",
         observation: { $first: "$$ROOT" },
+      },
+    },
+    {
+      $sort: {
+        "observation.patient.firstName": 1,
       },
     },
     {
@@ -373,20 +378,21 @@ export const patientMedicationLevel = (patientSsn: string) => {
       while (medicationLevel >= 0) {
         let date = new Date(observation.date);
         date.setMonth(date.getMonth() - i);
-        if (
-          !patientMedicationsLevel.labels.find((val) => val === date.getMonth())
-        ) {
-          patientMedicationsLevel.labels.push(date.getMonth());
+
+        let newDate = date.toDateString();
+        if (!patientMedicationsLevel.labels.find((val) => val === newDate)) {
+          patientMedicationsLevel.labels.push(newDate);
         }
         patientMedication.medicationLevel.push({
           level: +medicationLevel,
-          date: date.getMonth(),
+          date: newDate,
         });
         i++;
         medicationLevel--;
       }
       patientMedicationsLevel.dataSet.push(patientMedication);
     });
+
     patientMedicationsLevel.labels.sort((a, b) => b - a);
 
     let finalResponseData = {

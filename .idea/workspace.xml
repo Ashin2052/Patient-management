@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Refactor types">
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Refactor medication level api and UI.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/patient/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/patient/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -551,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684748158728</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="LFUNIOLD-305: Refactor medication level api and UI.">
+      <created>1684751264665</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1684751264665</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LFUNIOLD-88: Make form and add functionalities." />
     <MESSAGE value="LFUNIOLD-88: MmAIN FUNCTIONALITES COMPLETED" />
     <MESSAGE value="LFUNIOLD-88: Set up test and doc." />
     <MESSAGE value="LFUNIOLD-88: Implement logger and README.md." />
@@ -607,7 +609,8 @@
     <MESSAGE value="LFUNIOLD-305: Set up dashboard UI" />
     <MESSAGE value="LFUNIOLD-305: Fix UI of dashboard." />
     <MESSAGE value="LFUNIOLD-305: Refactor types" />
-    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Refactor types" />
+    <MESSAGE value="LFUNIOLD-305: Refactor medication level api and UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Refactor medication level api and UI." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
