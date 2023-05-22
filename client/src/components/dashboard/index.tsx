@@ -30,19 +30,21 @@ ChartJS.register(
 const columns: ColumnsType<any> = [
   {
     title: "Patient",
-    dataIndex: "patient",
-    key: "patient.patientSsn",
+    dataIndex: "observation",
+    key: "observation.patient._id",
     render: (row) => (
-      <a href={`/patient/${row.patientSsn}`}>{row?.firstName + row.lastName}</a>
+      <a href={`/patient/${row.patient.patientSsn}`}>
+        {row?.patient.firstName + row.patient.lastName}
+      </a>
     ),
   },
   {
     title: "Observation",
-    dataIndex: "patient",
-    key: "patient.patientSsn",
+    dataIndex: "observation",
+    key: "observation._id",
     ellipsis: true,
     render: (row) => {
-      return row.observation.remark;
+      return row.remark;
     },
   },
 ];

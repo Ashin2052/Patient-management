@@ -27,7 +27,7 @@ const MedicationSchema = new Schema<any>(
 const MedicationModel = model<any>("Medication", MedicationSchema);
 
 MedicationSchema.pre("save", function (next) {
-  var self = this;
+  const self = this;
   MedicationModel.exists(
     { medicationId: self.medicationId },
     function (err, present) {

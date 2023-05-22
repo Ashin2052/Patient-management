@@ -10,7 +10,7 @@ router.post("/upload", upload.single("csv"), async (req, res, next) => {
   patientService.uploadPatientsINfo(req.file, res);
 });
 
-router.get("/dashboard", auth, (req, res, next) => {
+router.get("/dashboard", (req, res, next) => {
   patientService
     .aggregate()
     .then((data) => {

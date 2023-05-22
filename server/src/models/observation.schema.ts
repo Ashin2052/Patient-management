@@ -1,10 +1,11 @@
 import { Schema, model } from "mongoose";
+// import { MongooseQueryLogger } from "mongoose-query-logger";
 
+// export const queryLogger = new MongooseQueryLogger();
 const ObservationSchema = new Schema<any>(
   {
     observationId: {
       type: String,
-      unique: true,
     },
     date: {
       type: String,
@@ -15,20 +16,25 @@ const ObservationSchema = new Schema<any>(
     remark: {
       type: String,
     },
-    patientId: {
-      type: String,
+    patient: {
+      type: Schema.Types.ObjectId,
+      ref: "patient",
     },
-    hospitalId: {
-      type: String,
+    hospital: {
+      type: Schema.Types.ObjectId,
+      ref: "hospital",
     },
-    practitionerId: {
-      type: String,
+    practitioner: {
+      type: Schema.Types.ObjectId,
+      ref: "practitioner",
     },
-    nurseId: {
-      type: String,
+    nurse: {
+      type: Schema.Types.ObjectId,
+      ref: "nurse",
     },
-    medicationId: {
-      type: String,
+    medication: {
+      type: Schema.Types.ObjectId,
+      ref: "medication",
     },
   },
   {
@@ -54,4 +60,5 @@ ObservationSchema.pre("save", function (next) {
   );
 });
 
+// ObservationSchema.plugin(queryLogger.getPlugin());
 export default ObservationModel;

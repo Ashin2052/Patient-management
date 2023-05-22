@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Fix UI of dashboard.">
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Add Upload on FE.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/registration/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/registration/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/configs/dbConnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/configs/dbConnect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/hospital.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/hospital.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/nurse.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/nurse.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/observation.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/observation.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/practitioner.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/practitioner.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -279,6 +287,9 @@
       <workItem from="1684331943385" duration="12194000" />
       <workItem from="1684349641140" duration="28676000" />
       <workItem from="1684422237597" duration="11960000" />
+      <workItem from="1684651956962" duration="4448000" />
+      <workItem from="1684728066563" duration="421000" />
+      <workItem from="1684737607101" duration="7487000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project.">
       <created>1672741237120</created>

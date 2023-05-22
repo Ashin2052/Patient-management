@@ -42,7 +42,7 @@ const PractitionerSchema = new Schema<any>(
 const PractitionerModel = model<any>("Practitioner", PractitionerSchema);
 
 PractitionerSchema.pre("save", function (next) {
-  var self = this;
+  const self = this;
   PractitionerModel.exists(
     { practitionerId: self.practitionerId },
     function (err, present) {

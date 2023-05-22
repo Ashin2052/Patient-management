@@ -13,89 +13,150 @@ const streamifier = require("streamifier");
 /**
  * Bulk upload csv file
  * */
-export const uploadPatientsINfo = (req, res) => {
+export const uploadPatientsINfo = async (req, res) => {
   const { buffer } = req;
-  const observations = [];
-  streamifier
-    .createReadStream(buffer)
-    .pipe(csv.parse({ headers: true, ignoreEmpty: true })) // <== this is @fast-csv/parse!!
-    .on("data", async (row) => {
-      if (row.patient_ssn && row.practitioner_id && row.observation_id) {
-        observations.push(transformCsvToSchema(row));
-      }
-    })
-    .on("end", async (rowCount) => {
-      const session = await mongoose.startSession();
-      try {
-        session.startTransaction();
-        const observation = await ObservationModel.create(
-          observations.map((value) => value.observation)
-        );
-        await PatientModel.create(observations.map((value) => value.patient));
-        await PractitionerModel.create(
-          observations.map((value) => {
-            let isOvertime;
-            observations.find((val) => {
-              if (val.observation.time < val.nurse.checkOut) {
-                isOvertime = true;
-                return;
+  let ignoredROws = [];
+  const session = await mongoose.startSession();
+  session.startTransaction();
+  try {
+    streamifier
+      .createReadStream(buffer)
+      .pipe(csv.parse({ headers: true, ignoreEmpty: true })) // <== this is @fast-csv/parse!!
+      .on("data", async (row) => {
+        if (
+          row.patient_ssn &&
+          row.practitioner_id &&
+          row.observation_id &&
+          row.nurse_id
+        ) {
+          let transformedValue = transformCsvToSchema(row);
+          const hospital = await HospitalModel.findOneAndUpdate(
+            {
+              hospitalId: transformedValue.hospital.hospitalId,
+            },
+            transformedValue.hospital,
+            {
+              upsert: true,
+            }
+          ).lean();
+
+          let medication;
+          if (transformedValue.medication.medicationId) {
+            medication = await MedicationModel.findOneAndUpdate(
+              {
+                medicationId: transformedValue.medication.medicationId,
+              },
+              transformedValue.medication,
+              {
+                upsert: true,
               }
-            });
-            return { ...value.practitioner, overTime: isOvertime };
-          })
-        );
-        await NurseModel.create(
-          observations.map((value) => {
-            let isOvertime;
-            observations.find((val) => {
-              console.log(
-                val.observation.time > val.nurse.checkOut,
-                val.observation.time,
-                val.nurse.checkOut
-              );
-              if (val.observation.time < val.nurse.checkOut) {
-                isOvertime = true;
-                return;
-              }
-            });
-            return { ...value.nurse, overTime: isOvertime };
-          })
-        );
-        await MedicationModel.create(
-          observations.map((value) => value.medication)
-        );
-        await HospitalModel.create(observations.map((value) => value.hospital));
+            ).lean();
+          }
+
+          const patient = await PatientModel.findOneAndUpdate(
+            {
+              patientSsn: transformedValue.patient.patientSsn,
+            },
+            transformedValue.patient,
+            {
+              upsert: true,
+            }
+          ).lean();
+
+          const nurse = await NurseModel.findOneAndUpdate(
+            {
+              nurseId: transformedValue.nurse.nurseId,
+            },
+            {
+              ...transformedValue.nurse,
+              hasOvertime:
+                transformedValue.observation.time <
+                transformedValue.nurse.checkOut,
+            },
+            {
+              upsert: true,
+            }
+          ).lean();
+
+          const practitioner = await PractitionerModel.findOneAndUpdate(
+            {
+              practitionerId: transformedValue.practitioner.practitionerId,
+            },
+            {
+              ...transformedValue.practitioner,
+              hasOvertime:
+                transformedValue.observation.time <
+                transformedValue.practitioner.checkOut,
+            },
+            {
+              upsert: true,
+            }
+          ).lean();
+
+          const obv = await ObservationModel.findOneAndUpdate(
+            {
+              observationId: transformedValue.observation.observationId,
+            },
+            {
+              ...transformedValue.observation,
+              practitioner: practitioner._id,
+              patient: patient._id,
+              nurse: nurse._id,
+              hospital: hospital._id,
+              medication: medication?._id,
+            },
+            {
+              upsert: true,
+            }
+          );
+        } else {
+          ignoredROws.push(row);
+        }
+      })
+      .on("end", async (rowCount) => {
+        console.log("rr");
         await session.commitTransaction();
-        res.json({ rowCount, data: observation });
-      } catch (error) {
-        await session.abortTransaction();
-        res.status(400).json(error.toString());
-      }
-    });
+        res.status(200).json({
+          rowCount,
+          ignoredROws,
+        });
+      });
+  } catch (e) {
+    await session.abortTransaction();
+    res.status(400).json(e.toString());
+  }
 };
 
 const getPatientListAndLastObservation = () => {
-  return PatientModel.aggregate([
+  return ObservationModel.aggregate([
     {
       $lookup: {
-        from: "observations",
-        localField: "patientSsn",
-        foreignField: "patientId",
-        as: "observation",
+        from: "patients",
+        localField: "patient",
+        foreignField: "_id",
+        as: "patient",
       },
     },
     {
       $unwind: {
-        path: "$observation",
+        path: "$patient",
       },
     },
     {
-      $sort: { "observation.date": 1 },
+      $sort: {
+        createdAt: -1,
+      },
     },
     {
       $group: {
-        _id: "$patientSsn",
-        patient: { $first: "$$ROOT" },
+        _id: "$patient._id",
+        observation: { $first: "$$ROOT" },
+      },
+    },
+    {
+      $project: {
+        _id: "$$REMOVE",
+        observation: "$observation",
       },
     },
   ]);
@@ -110,8 +171,8 @@ const medicationPerPatient = () => {
       {
         $lookup: {
           from: "observations",
-          localField: "medicationId",
-          foreignField: "medicationId",
+          localField: "_id",
+          foreignField: "medication",
           as: "observations",
         },
       },
@@ -121,8 +182,8 @@ const medicationPerPatient = () => {
       {
         $lookup: {
           from: "patients",
-          localField: "observations.patientId",
-          foreignField: "patientSsn",
+          localField: "observations.patient",
+          foreignField: "_id",
           as: "patient",
         },
       },
@@ -159,8 +220,8 @@ const nursePerPatient = () => {
       {
         $lookup: {
           from: "observations",
-          localField: "nurseId",
-          foreignField: "nurseId",
+          localField: "_id",
+          foreignField: "nurse",
           as: "observations",
         },
       },
@@ -170,8 +231,8 @@ const nursePerPatient = () => {
       {
         $lookup: {
           from: "patients",
-          localField: "observations.patientId",
-          foreignField: "patientSsn",
+          localField: "observations.patient",
+          foreignField: "_id",
           as: "patient",
         },
       },
@@ -210,8 +271,8 @@ const doctorPerPatient = () => {
       {
         $lookup: {
           from: "observations",
-          localField: "practitionerId",
-          foreignField: "practitionerId",
+          localField: "_id",
+          foreignField: "practitioner",
           as: "observations",
         },
       },
@@ -221,8 +282,8 @@ const doctorPerPatient = () => {
       {
         $lookup: {
           from: "patients",
-          localField: "observations.patientId",
-          foreignField: "patientSsn",
+          localField: "observations.patient",
+          foreignField: "_id",
           as: "patient",
         },
       },
@@ -266,16 +327,16 @@ export const patientMedicationLevel = (patientSsn: string) => {
     {
       $lookup: {
         from: "observations",
-        localField: "patientSsn",
-        foreignField: "patientId",
+        localField: "_id",
+        foreignField: "patient",
         as: "observations",
       },
     },
     {
       $lookup: {
         from: "medications",
-        localField: "observations.medicationId",
-        foreignField: "medicationId",
+        localField: "observations.medication",
+        foreignField: "_id",
         as: "medications",
       },
     },
@@ -295,7 +356,8 @@ export const patientMedicationLevel = (patientSsn: string) => {
     //data comes in single array
     data[0].root.observations.forEach((observation) => {
       let medication = data[0].root.medications.find(
-        (medication) => medication.medicationId === observation.medicationId
+        (medication) =>
+          medication._id.toString() === observation.medication.toString()
       );
 
       let patientMedication = {
@@ -357,42 +419,50 @@ const listOfPatientAndLastMedicationAssigned = () => {
     {
       $lookup: {
         from: "medications",
-        localField: "medicationId",
-        foreignField: "medicationId",
-        as: "medications",
+        localField: "medication",
+        foreignField: "_id",
+        as: "medication",
       },
     },
     {
       $lookup: {
         from: "patients",
-        localField: "patientId",
-        foreignField: "patientSsn",
-        as: "patients",
+        localField: "patient",
+        foreignField: "_id",
+        as: "patient",
       },
     },
     {
-      $unwind: "$medications",
+      $unwind: {
+        path: "$patient",
+      },
     },
     {
-      $unwind: "$patients",
+      $unwind: {
+        path: "$medication",
+      },
     },
     {
-      $sort: { date: -1 },
+      $sort: {
+        createdAt: -1,
+      },
     },
     {
       $group: {
-        _id: "$patientId",
-        root: { $first: "$$ROOT" },
+        _id: "$patient._id",
+        root: {
+          $first: "$$ROOT",
+        },
       },
     },
     {
       $project: {
         _id: "$_id",
-        patientId: "$root.patients.patientSsn",
-        firstName: "$root.patients.firstName",
-        lastName: "$root.patients.lastName",
-        medicationName: "$root.medications.medicationName",
-        medicationId: "$root.medications.medicationId",
+        patientId: "$root.patient.patientSsn",
+        firstName: "$root.patient.firstName",
+        lastName: "$root.patient.lastName",
+        medicationName: "$root.medication.medicationName",
+        medicationId: "$root.medication.medicationId",
       },
     },
   ]);

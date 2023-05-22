@@ -36,7 +36,7 @@ const NurseSchema = new Schema<any>(
 const NurseModel = model<any>("Nurse", NurseSchema);
 
 NurseSchema.pre("save", function (next) {
-  var self = this;
+  const self = this;
   NurseModel.exists({ id: self.id }, function (err, present) {
     if (!present) {
       next();

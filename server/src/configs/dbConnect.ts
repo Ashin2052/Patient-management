@@ -8,6 +8,7 @@ type TInput = {
 export const dbConnect = ({ db }: TInput) => {
   const connect = () => {
     mongoose.set("strictQuery", false);
+    mongoose.set("useUnifiedTopology", false);
     mongoose
       .connect(db)
       .then(() => {

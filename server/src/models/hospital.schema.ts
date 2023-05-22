@@ -27,7 +27,7 @@ const HospitalSchema = new Schema<any>(
 const HospitalModel = model<any>("Hospital", HospitalSchema);
 
 HospitalSchema.pre("save", function (next) {
-  var self = this;
+  const self = this;
   HospitalModel.exists(
     { hospitalId: self.hospitalId },
     function (err, present) {
