@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Col, Collapse, Row, Table } from "antd";
+import { Col, Collapse, Input, Row, Table } from "antd";
 
 import { ColumnsType } from "antd/es/table";
 
@@ -17,6 +17,7 @@ import {
 } from "chart.js";
 
 import callApi from "../../shared/api";
+import { OpenNotification } from "../../shared/notification/notification";
 
 ChartJS.register(
   CategoryScale,
@@ -73,10 +74,67 @@ const Dashboard = () => {
     });
   }, []);
 
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const formData = new FormData();
+    formData.append("csv", file);
+    callApi(
+      {
+        url: "patient/upload",
+        method: "post",
+        payload: formData,
+      },
+      true
+    ).then((val) => {
+      callApi({
+        url: "patient/dashboard",
+        method: "get",
+      })
+        .then((data) => {
+          OpenNotification({
+            message: "Uploaded",
+            description: "Uploaded Susccessfully",
+            type: "success",
+          });
+          setDashboardData(data);
+        })
+        .catch((e) => {
+          OpenNotification({
+            message: "Upload Failed",
+            description: e.toString(),
+            type: "error",
+          });
+        });
+    });
+  };
+
   return (
     <>
       {dashboardData && (
         <div>
+          <Row justify={"space-between"} align={"middle"}>
+            <Col className={"ml-16"}>
+              <h1>Patient Management Insights</h1>
+            </Col>
+            <Col span={7} className={"csv-upload"}>
+              <Row justify={"space-around"} align={"middle"}>
+                <Col>
+                  <h4>Upload Patient Csv</h4>
+                </Col>
+                <Col>
+                  <Input
+                    className={"mt-16"}
+                    accept={".csv"}
+                    type="file"
+                    placeholder={"Upload Patient Csv"}
+                    required={true}
+                    onChange={handleFileUpload}
+                  />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
           <Row justify={"space-around"} className={"dashboard-first-row"}>
             <Col span={14}>
               <Row justify={"space-around"}>

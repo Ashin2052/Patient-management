@@ -7,7 +7,7 @@ type TInput = {
 
 export const dbConnect = ({ db }: TInput) => {
   const connect = () => {
-    mongoose.set({ strictQuery: false });
+    mongoose.set("strictQuery", false);
     mongoose
       .connect(db)
       .then(() => {

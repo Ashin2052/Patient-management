@@ -54,6 +54,10 @@
   margin: 16px;
 }
 
+.mt-16{
+  margin: 16px;
+}
+
 .ml-16 {
   margin-left: 16px;
 }
@@ -88,6 +92,13 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 16px;
   margin: 0 16px 16px 16px;
+}
+
+.csv-upload {
+  background: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 4px;
+  margin: 16px;
 }
 .graph-container {
   background: white;
