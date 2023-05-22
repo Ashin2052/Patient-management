@@ -92,7 +92,7 @@ const Dashboard = () => {
         payload: formData,
       },
       true
-    ).then((val) => {
+    ).then(() => {
       callApi({
         url: "patient/dashboard",
         method: "get",
@@ -130,7 +130,6 @@ const Dashboard = () => {
                 </Col>
                 <Col>
                   <Input
-                    className={"mt-16"}
                     accept={".csv"}
                     type="file"
                     placeholder={"Upload Patient Csv"}

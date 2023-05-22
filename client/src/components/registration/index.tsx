@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { Button, Col, Form, Input, Row } from "antd";
 
 import { useNavigate } from "react-router-dom";
 
-import api from "../../shared/api";
-import { login } from "../../shared/reducers/auth-reducer";
 import callApi from "../../shared/api";
 
 const layout = {
