@@ -1,8 +1,9 @@
 import { Schema, model } from "mongoose";
-// import { MongooseQueryLogger } from "mongoose-query-logger";
+import { IObservation } from "../types/pateint.service.types";
+import { MongooseQueryLogger } from "mongoose-query-logger";
 
-// export const queryLogger = new MongooseQueryLogger();
-const ObservationSchema = new Schema<any>(
+export const queryLogger = new MongooseQueryLogger();
+const ObservationSchema = new Schema<IObservation>(
   {
     observationId: {
       type: String,
@@ -60,5 +61,5 @@ ObservationSchema.pre("save", function (next) {
   );
 });
 
-// ObservationSchema.plugin(queryLogger.getPlugin());
+ObservationSchema.plugin(queryLogger.getPlugin);
 export default ObservationModel;

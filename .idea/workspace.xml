@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Add Upload on FE.">
+      <change afterPath="$PROJECT_DIR$/client/src/types/patient.api.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/types/pateint.service.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/types/shared.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/shared.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/configs/dbConnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/configs/dbConnect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/hospital.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/hospital.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/nurse.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/nurse.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/observation.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/observation.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/practitioner.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/practitioner.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <recent name="$PROJECT_DIR$/server/_tests_" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.client">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
       <node-options value="" />
@@ -181,10 +180,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.lint-fix" />
-        <item itemvalue="npm.run:be" />
-        <item itemvalue="npm.run:fe" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.run:fe" />
+        <item itemvalue="npm.run:be" />
+        <item itemvalue="npm.lint-fix" />
       </list>
     </recent_temporary>
   </component>
@@ -620,6 +619,12 @@
           <url>file://$PROJECT_DIR$/server/src/services/user.service.ts</url>
           <line>35</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/src/services/patient.service.ts</url>
+          <line>351</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

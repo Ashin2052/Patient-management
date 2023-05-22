@@ -6,6 +6,7 @@ import { NurseModel } from "../models/nurse.schema";
 import { HospitalModel } from "../models/hospital.schema";
 import { MedicationModel } from "../models/medicine.schema";
 import mongoose from "mongoose";
+import { MedicationLevelQueryResponse } from "../types/pateint.service.types";
 
 const csv = require("@fast-csv/parse");
 const streamifier = require("streamifier");
@@ -346,7 +347,7 @@ export const patientMedicationLevel = (patientSsn: string) => {
         root: { $first: "$$ROOT" },
       },
     },
-  ]).then((data: any) => {
+  ]).then((data: MedicationLevelQueryResponse[]) => {
     //initialize return response
     let patientMedicationsLevel = {
       labels: [],
@@ -366,7 +367,7 @@ export const patientMedicationLevel = (patientSsn: string) => {
       };
       let i = 0;
 
-      let medicationLevel = medication.medicationLevel;
+      let medicationLevel = +medication.medicationLevel;
       // decrement date by one month and also decrement medication by one level
       while (medicationLevel >= 0) {
         let date = new Date(observation.date);

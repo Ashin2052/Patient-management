@@ -14,11 +14,14 @@ type ApiData = {
   [key: string]: string;
 };
 
-export type ApiResponse = {
-  data: ApiData;
-  message?: string;
+export interface AxiosResponse<T = any> {
+  data: T;
   status: number;
-};
+  statusText: string;
+  headers: any;
+  config: any;
+  request?: any;
+}
 
 export type Signup = {
   email: string;
@@ -30,16 +33,4 @@ export type Signup = {
 export type Itable = {
   dataSource: any[];
   columns: any[];
-};
-
-export type Column = {
-  id: "name" | "code" | "population" | "size" | "density";
-  label: string;
-  minWidth?: number;
-  align?: "right" | "left";
-  format?: (value: number) => string;
-};
-
-export type IChildrenProps = {
-  children: JSX.Element;
 };

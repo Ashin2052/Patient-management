@@ -1,5 +1,6 @@
 import mongoose, { Schema, model } from "mongoose";
-const PatientSchema = new Schema<any>(
+import { IPatient } from "../types/pateint.service.types";
+const PatientSchema = new Schema<IPatient>(
   {
     patientSsn: {
       type: String,

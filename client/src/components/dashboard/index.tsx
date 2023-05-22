@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Col, Collapse, Input, Row, Table } from "antd";
+import { Col, Input, Row, Table } from "antd";
 
 import { ColumnsType } from "antd/es/table";
 
@@ -18,6 +18,10 @@ import {
 
 import callApi from "../../shared/api";
 import { OpenNotification } from "../../shared/notification/notification";
+import {
+  IDashboard,
+  PatientLatestObservation,
+} from "../../types/patient.api.types";
 
 ChartJS.register(
   CategoryScale,
@@ -27,7 +31,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-const columns: ColumnsType<any> = [
+const columns: ColumnsType<PatientLatestObservation> = [
   {
     title: "Patient",
     dataIndex: "observation",
@@ -65,14 +69,14 @@ const patientListAndLastMedication: ColumnsType<any> = [
   },
 ];
 const Dashboard = () => {
-  const [dashboardData, setDashboardData] = useState<any>();
+  const [dashboardData, setDashboardData] = useState<IDashboard>();
 
   useEffect(() => {
     callApi({
       url: "patient/dashboard",
       method: "get",
-    }).then((data) => {
-      setDashboardData(data);
+    }).then((response) => {
+      setDashboardData(response as unknown as IDashboard);
     });
   }, []);
 
@@ -93,13 +97,13 @@ const Dashboard = () => {
         url: "patient/dashboard",
         method: "get",
       })
-        .then((data) => {
+        .then((response) => {
           OpenNotification({
             message: "Uploaded",
             description: "Uploaded Susccessfully",
             type: "success",
           });
-          setDashboardData(data);
+          setDashboardData(response as unknown as IDashboard);
         })
         .catch((e) => {
           OpenNotification({
