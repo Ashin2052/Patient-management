@@ -222,7 +222,7 @@ const Dashboard = () => {
                       ),
                       datasets: [
                         {
-                          label: "No of patient",
+                          label: "Patient",
                           data: dashboardData.medicationPatientChart.map(
                             (row) => row.count
                           ),

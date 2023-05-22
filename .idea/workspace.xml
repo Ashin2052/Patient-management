@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Add Upload on FE.">
-      <change afterPath="$PROJECT_DIR$/client/src/types/patient.api.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/types/pateint.service.types.ts" afterDir="false" />
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Refactor types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/types/shared.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/types/shared.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/observation.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/observation.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/patient.schemas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/patient/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/patient/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +91,7 @@
       <recent name="$PROJECT_DIR$/server/_tests_" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.client">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
       <node-options value="" />
@@ -549,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684434143127</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="LFUNIOLD-305: Refactor types">
+      <created>1684748158728</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1684748158728</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +582,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LFUNIOLD-88: Make form and implement functionalities." />
     <MESSAGE value="LFUNIOLD-88: Make form and add functionalities." />
     <MESSAGE value="LFUNIOLD-88: MmAIN FUNCTIONALITES COMPLETED" />
     <MESSAGE value="LFUNIOLD-88: Set up test and doc." />
@@ -605,7 +606,8 @@
     <MESSAGE value="Multiple" />
     <MESSAGE value="LFUNIOLD-305: Set up dashboard UI" />
     <MESSAGE value="LFUNIOLD-305: Fix UI of dashboard." />
-    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Fix UI of dashboard." />
+    <MESSAGE value="LFUNIOLD-305: Refactor types" />
+    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Refactor types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,12 +621,6 @@
           <url>file://$PROJECT_DIR$/server/src/services/user.service.ts</url>
           <line>35</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/src/services/patient.service.ts</url>
-          <line>351</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

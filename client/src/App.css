@@ -108,3 +108,11 @@
 .boz-shadow {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.color-white {
+  color: white  !important;
+}

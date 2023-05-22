@@ -29,8 +29,8 @@ export const HeaderComponent = () => {
   return (
     <div>
       <Row justify={"space-between"} align={"middle"} className={"pb-24"}>
-        <Link to={"/home"} color={"white"}>
-          Home
+        <Link to={"/home"} className={"color-white fw-400"}>
+          <span>Home</span>
         </Link>
         <Button
           style={{ float: "right" }}

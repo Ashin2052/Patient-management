@@ -348,6 +348,7 @@ export const patientMedicationLevel = (patientSsn: string) => {
       },
     },
   ]).then((data: MedicationLevelQueryResponse[]) => {
+    let patientMedicationLevel = data[0].root;
     //initialize return response
     let patientMedicationsLevel = {
       labels: [],
@@ -355,8 +356,8 @@ export const patientMedicationLevel = (patientSsn: string) => {
     };
 
     //data comes in single array
-    data[0].root.observations.forEach((observation) => {
-      let medication = data[0].root.medications.find(
+    patientMedicationLevel.observations.forEach((observation) => {
+      let medication = patientMedicationLevel.medications.find(
         (medication) =>
           medication._id.toString() === observation.medication.toString()
       );
@@ -408,7 +409,18 @@ export const patientMedicationLevel = (patientSsn: string) => {
       });
     });
 
-    return finalResponseData;
+    return {
+      medicationLevel: finalResponseData,
+      info: {
+        name:
+          patientMedicationLevel.firstName +
+          " " +
+          patientMedicationLevel.lastName,
+        email: patientMedicationLevel.email,
+        address1: patientMedicationLevel.address1,
+        occupation: patientMedicationLevel.occupation,
+      },
+    };
   });
 };
 
