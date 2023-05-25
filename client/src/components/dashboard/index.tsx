@@ -16,12 +16,12 @@ import {
   Legend,
 } from "chart.js";
 
-import callApi from "../../shared/api";
 import { OpenNotification } from "../../shared/notification/notification";
 import {
   IDashboard,
   PatientLatestObservation,
 } from "../../types/patient.api.types";
+import { getDashboardData, uploadCsv } from "../../services/dashboard.service";
 
 ChartJS.register(
   CategoryScale,
@@ -72,12 +72,13 @@ const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState<IDashboard>();
 
   useEffect(() => {
-    callApi({
-      url: "patient/dashboard",
-      method: "get",
-    }).then((response) => {
-      setDashboardData(response as unknown as IDashboard);
-    });
+    getDashboardData()
+      .then((response) => {
+        setDashboardData(response as unknown as IDashboard);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const handleFileUpload = (event) => {
@@ -85,40 +86,31 @@ const Dashboard = () => {
     if (!file) return;
     const formData = new FormData();
     formData.append("csv", file);
-    callApi(
-      {
-        url: "patient/upload",
-        method: "post",
-        payload: formData,
-      },
-      true
-    ).then(() => {
-      callApi({
-        url: "patient/dashboard",
-        method: "get",
+    uploadCsv(formData)
+      .then(() => {
+        return getDashboardData();
       })
-        .then((response) => {
-          OpenNotification({
-            message: "Uploaded",
-            description: "Uploaded Susccessfully",
-            type: "success",
-          });
-          setDashboardData(response as unknown as IDashboard);
-        })
-        .catch((e) => {
-          OpenNotification({
-            message: "Upload Failed",
-            description: e.toString(),
-            type: "error",
-          });
+      .then((response) => {
+        OpenNotification({
+          message: "Uploaded",
+          description: "Uploaded Susccessfully",
+          type: "success",
         });
-    });
+        setDashboardData(response as unknown as IDashboard);
+      })
+      .catch((e) => {
+        OpenNotification({
+          message: "Upload Failed",
+          description: e.toString(),
+          type: "error",
+        });
+      });
   };
 
   return (
-    <>
+    <div data-testid="dashboard-container">
       {dashboardData && (
-        <div>
+        <div data-testid="data-container">
           <Row justify={"space-between"} align={"middle"}>
             <Col className={"ml-16"}>
               <h1>Patient Management Insights</h1>
@@ -191,6 +183,7 @@ const Dashboard = () => {
                 <Col span={12} className={"boz-shadow ml-4 pd-8"}>
                   <h3>Nurse per patient</h3>
                   <Bar
+                    id={"nurse-per-patient"}
                     data={{
                       labels: dashboardData.nursePerPatient.map(
                         (row) => row.firstName
@@ -259,7 +252,7 @@ const Dashboard = () => {
           </Row>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

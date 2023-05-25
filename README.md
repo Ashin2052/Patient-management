@@ -21,4 +21,6 @@ HOST= xx
 # FrontEnd
 Install dependencies: ``` npm i```
 
-run: ``` npm run start```
+TO run application: ``` npm run start```
+
+To run test ``` npm run test```

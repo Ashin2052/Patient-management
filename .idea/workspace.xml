@@ -4,10 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Apply sorting.">
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Implement test cases.">
+      <change afterPath="$PROJECT_DIR$/client/_tests_/shared/components/dashboard.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/shared/components/login.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/components/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/components/dashboard/index.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/services/dashboard.service.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/services/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/shared/api.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/shared/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/dashboard/index.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/login/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/login/login.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/dashboard.service.tsx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/services/dashboard.service.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/shared/api.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/shared/api.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/shared/ui/datatable.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/datatable.fixture.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/datatable.fixture.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/api.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/api.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/browsermock.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/browsermock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/jest.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/registration/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/registration/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +90,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Allergy-management/client/node_modules/react-scripts&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Patient-management/client/node_modules/react-scripts&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;/home/ashinsinghmahat/.nvm/versions/node/v18.15.0/bin/node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/ashinsinghmahat/IdeaProjects/Patient-management/client/node_modules/prettier&quot;,
@@ -88,7 +116,7 @@
       <recent name="$PROJECT_DIR$/server/_tests_" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.test:watch --verbose">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
       <node-options value="" />
@@ -96,6 +124,22 @@
       <working-dir value="$PROJECT_DIR$/client" />
       <envs />
       <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Renders home correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/client/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/client" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/client/_tests_/shared/components/dashboard.test.tsx" />
+      <test-names>
+        <test-name value="Renders home correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Patient-management/client/test-coverage/lcov-report/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="client" type="js.build_tools.npm">
@@ -120,62 +164,42 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="lint-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint-fix" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.15.0/bin/node" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="run:be" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="run:be" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.15.0/bin/node" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="run:fe" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="run:fe" />
-      </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.15.0/bin/node" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
       <scripts>
         <script value="test" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:watch --verbose" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:watch" />
+      </scripts>
+      <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Jest.Renders home correctly" />
       <item itemvalue="npm.client" />
-      <item itemvalue="npm.lint-fix" />
+      <item itemvalue="npm.test (1)" />
+      <item itemvalue="npm.test:watch --verbose" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="npm.run:be" />
-      <item itemvalue="npm.run:fe" />
-      <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:watch --verbose" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.run:fe" />
-        <item itemvalue="npm.run:be" />
-        <item itemvalue="npm.lint-fix" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Jest.Renders home correctly" />
+        <item itemvalue="npm.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -281,6 +305,9 @@
       <workItem from="1684651956962" duration="4448000" />
       <workItem from="1684728066563" duration="421000" />
       <workItem from="1684737607101" duration="7487000" />
+      <workItem from="1684815033870" duration="18740000" />
+      <workItem from="1684900890513" duration="9289000" />
+      <workItem from="1684987267540" duration="8843000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project.">
       <created>1672741237120</created>
@@ -562,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684753905397</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="LFUNIOLD-305: Refactor css.">
+      <created>1684754112261</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1684754112261</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,8 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LFUNIOLD-88: Set up test and doc." />
-    <MESSAGE value="LFUNIOLD-88: Implement logger and README.md." />
     <MESSAGE value="LFUNIOLD-88: Implement test." />
     <MESSAGE value="LFUNIOLD-88: Implement tes." />
     <MESSAGE value="LFUNIOLD-88: Rename file." />
@@ -618,7 +650,9 @@
     <MESSAGE value="LFUNIOLD-305: Refactor types" />
     <MESSAGE value="LFUNIOLD-305: Refactor medication level api and UI." />
     <MESSAGE value="LFUNIOLD-305: Apply sorting." />
-    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Apply sorting." />
+    <MESSAGE value="LFUNIOLD-305: Refactor css." />
+    <MESSAGE value="LFUNIOLD-305: Implement test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Implement test cases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -632,6 +666,11 @@
           <url>file://$PROJECT_DIR$/server/src/services/user.service.ts</url>
           <line>35</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts</url>
+          <line>722</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
