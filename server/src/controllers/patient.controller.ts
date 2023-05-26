@@ -10,7 +10,7 @@ router.post("/upload", upload.single("csv"), async (req, res, next) => {
   patientService.uploadPatientsINfo(req.file, res);
 });
 
-router.get("/dashboard", (req, res, next) => {
+router.get("/dashboard", auth, (req, res, next) => {
   patientService
     .aggregate()
     .then((data) => {
@@ -33,7 +33,7 @@ router.get("/patientMedicationLevel/:id", auth, (req, res, next) => {
     });
 });
 
-router.get("/high-risk-patient", (req, res, next) => {
+router.get("/high-risk-patient", auth, (req, res, next) => {
   patientService
     .getHighRiskPatient()
     .then((data) => {

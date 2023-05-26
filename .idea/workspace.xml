@@ -4,38 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Implement test cases.">
-      <change afterPath="$PROJECT_DIR$/client/_tests_/shared/components/dashboard.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/shared/components/login.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/components/dashboard/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/components/dashboard/index.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/services/dashboard.service.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/services/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/shared/api.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/shared/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/dashboard/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/dashboard/index.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/login/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/components/login/login.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/dashboard.service.tsx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/dashboard.service.tsx" afterDir="false" />
+    <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Breaking test cases.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/shared/api.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/shared/api.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/shared/ui/datatable.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/datatable.fixture.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/datatable.fixture.ts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/_tests_/fixtures/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/services/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/api.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/api.tsx.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/src/shared/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/browsermock.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/browsermock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +89,7 @@
       <recent name="$PROJECT_DIR$/server/_tests_" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:watch --verbose">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.20.1/bin/node" />
       <node-options value="" />
@@ -195,8 +168,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:watch --verbose" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test:watch --verbose" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Jest.Renders home correctly" />
         <item itemvalue="npm.test (1)" />
@@ -307,7 +280,8 @@
       <workItem from="1684737607101" duration="7487000" />
       <workItem from="1684815033870" duration="18740000" />
       <workItem from="1684900890513" duration="9289000" />
-      <workItem from="1684987267540" duration="8843000" />
+      <workItem from="1684987267540" duration="10218000" />
+      <workItem from="1685076153240" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project.">
       <created>1672741237120</created>
@@ -596,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684754112261</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="LFUNIOLD-305: Breaking test cases.">
+      <created>1685001881167</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1685001881167</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +608,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LFUNIOLD-88: Implement test." />
     <MESSAGE value="LFUNIOLD-88: Implement tes." />
     <MESSAGE value="LFUNIOLD-88: Rename file." />
     <MESSAGE value="LFUNIOLD-88: Logger update" />
@@ -652,7 +632,8 @@
     <MESSAGE value="LFUNIOLD-305: Apply sorting." />
     <MESSAGE value="LFUNIOLD-305: Refactor css." />
     <MESSAGE value="LFUNIOLD-305: Implement test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Implement test cases." />
+    <MESSAGE value="LFUNIOLD-305: Breaking test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="LFUNIOLD-305: Breaking test cases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
