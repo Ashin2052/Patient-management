@@ -31,7 +31,8 @@ export const uploadPatientsINfo = async (req, res) => {
           row.nurse_id
         ) {
           let transformedValue = transformCsvToSchema(row);
-          const hospital = await HospitalModel.findOneAndUpdate(
+          let hospital, medication, patient, nurse, practitioner;
+          await HospitalModel.findOneAndUpdate(
             {
               hospitalId: transformedValue.hospital.hospitalId,
             },
@@ -39,11 +40,12 @@ export const uploadPatientsINfo = async (req, res) => {
             {
               upsert: true,
             }
-          ).lean();
+          ).then((value) => {
+            hospital = value;
+          });
 
-          let medication;
           if (transformedValue.medication.medicationId) {
-            medication = await MedicationModel.findOneAndUpdate(
+            await MedicationModel.findOneAndUpdate(
               {
                 medicationId: transformedValue.medication.medicationId,
               },
@@ -51,10 +53,12 @@ export const uploadPatientsINfo = async (req, res) => {
               {
                 upsert: true,
               }
-            ).lean();
+            ).then((val) => {
+              medication = val;
+            });
           }
 
-          const patient = await PatientModel.findOneAndUpdate(
+          await PatientModel.findOneAndUpdate(
             {
               patientSsn: transformedValue.patient.patientSsn,
             },
@@ -62,9 +66,11 @@ export const uploadPatientsINfo = async (req, res) => {
             {
               upsert: true,
             }
-          ).lean();
+          ).then((value) => {
+            patient = value;
+          });
 
-          const nurse = await NurseModel.findOneAndUpdate(
+          await NurseModel.findOneAndUpdate(
             {
               nurseId: transformedValue.nurse.nurseId,
             },
@@ -77,9 +83,11 @@ export const uploadPatientsINfo = async (req, res) => {
             {
               upsert: true,
             }
-          ).lean();
+          ).then((value) => {
+            nurse = value;
+          });
 
-          const practitioner = await PractitionerModel.findOneAndUpdate(
+          await PractitionerModel.findOneAndUpdate(
             {
               practitionerId: transformedValue.practitioner.practitionerId,
             },
@@ -92,9 +100,11 @@ export const uploadPatientsINfo = async (req, res) => {
             {
               upsert: true,
             }
-          ).lean();
+          ).then((value) => {
+            practitioner = value;
+          });
 
-          const obv = await ObservationModel.findOneAndUpdate(
+          await ObservationModel.findOneAndUpdate(
             {
               observationId: transformedValue.observation.observationId,
             },
@@ -128,7 +138,7 @@ export const uploadPatientsINfo = async (req, res) => {
   }
 };
 
-const getPatientListAndLastObservation = () => {
+export const getPatientListAndLastObservation = () => {
   return ObservationModel.aggregate([
     {
       $lookup: {

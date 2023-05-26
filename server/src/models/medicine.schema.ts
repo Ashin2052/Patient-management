@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from "mongoose";
 import { Medication } from "../types/pateint.service.types";
 
-const MedicationSchema = new Schema<Medication>(
+const MedicationSchema = new Schema<any>(
   {
     medicationId: {
       type: String,

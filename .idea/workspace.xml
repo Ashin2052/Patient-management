@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e084a26-c3f7-4f6b-bee3-1b396eb71ae0" name="Changes" comment="LFUNIOLD-305: Breaking test cases.">
+      <change afterPath="$PROJECT_DIR$/server/_tests_/fixtures/patient.fixtures.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/_tests_/services/pateient.service.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov-report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/client/_tests_/test-coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/patient.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/_tests_/db.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/_tests_/db.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/medicine.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/observation.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/observation.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/services/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/patient.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/services/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +287,8 @@
       <workItem from="1684815033870" duration="18740000" />
       <workItem from="1684900890513" duration="9289000" />
       <workItem from="1684987267540" duration="10218000" />
-      <workItem from="1685076153240" duration="525000" />
+      <workItem from="1685076153240" duration="5271000" />
+      <workItem from="1685085405992" duration="7299000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project.">
       <created>1672741237120</created>
@@ -577,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685001881167</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="LFUNIOLD-305: Breaking test cases.">
+      <created>1685076876156</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1685076876156</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,11 +656,6 @@
           <url>file://$PROJECT_DIR$/packages/client/src/App.test.tsx</url>
           <line>5</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/src/services/user.service.ts</url>
-          <line>35</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/_tests_/fixtures/datatable.fixture.ts</url>

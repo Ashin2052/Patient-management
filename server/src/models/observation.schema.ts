@@ -1,8 +1,6 @@
 import { Schema, model } from "mongoose";
 import { IObservation } from "../types/pateint.service.types";
-import { MongooseQueryLogger } from "mongoose-query-logger";
 
-export const queryLogger = new MongooseQueryLogger();
 const ObservationSchema = new Schema<IObservation>(
   {
     observationId: {
@@ -46,20 +44,4 @@ const ObservationSchema = new Schema<IObservation>(
 
 const ObservationModel = model<any>("Observation", ObservationSchema);
 
-ObservationSchema.pre("save", function (next) {
-  var self = this;
-  ObservationModel.exists(
-    { observationId: self.observationId },
-    function (err, present) {
-      if (!present) {
-        next();
-      } else {
-        console.log("user exists: ", self.observationId);
-        next(new Error("User exists!"));
-      }
-    }
-  );
-});
-
-ObservationSchema.plugin(queryLogger.getPlugin);
 export default ObservationModel;
